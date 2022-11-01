@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Cascading</title>
+    <!-- This is a link to the external stylesheet in this website. -->
+    <link rel="stylesheet" href="stylesheets/main.css" />
+
+    <!-- 
+      An internal stylesheet that affects all elements on this page.
+      The styling in the internal stylesheet will overwrite the styling
+      in the external stylesheet if the same property is styled in both places.
+    -->
+    <style>
+      /* This styles the font color for all body elements to be dark orange. */
+      body {
+        color: darkslategray;
+      }
+
+      /* This styles the main heading to have its text be right aligned. */
+      h1 {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <!-- 
+    This body tag has inline styling that changes the font color of all
+    body elements.
+    Since this is the same property that shows up in the internal stylesheet
+    and the external stylesheet, the value that is used by the web page is the
+    value given by the inline styling.
+    This means that inline styling overwrites both internal and external styling.
+  -->
+  <body style="color: darkmagenta">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Inline CSS</a></li>
+        <li><a href="internal-css.html" class="nav-link">Internal CSS</a></li>
+        <li><a href="external-css.html" class="nav-link">External CSS</a></li>
+        <li>
+          <a href="testing-cascading.html" class="nav-link">
+            Testing Cascading
+          </a>
+        </li>
+        <li>
+          <a href="classes-and-ids.html" class="nav-link">Classes and IDs</a>
+        </li>
+        <li><a href="div-and-span.html" class="nav-link">Divs and Spans</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Testing Cascading</h1>
+
+      <p>
+        This page shows the effects of adding external, internal, and inline CSS
+        to a web page.
+      </p>
+
+      <p>Does this paragraph have the same styling as my other paragraph?</p>
+    </main>
+  </body>
+</html>

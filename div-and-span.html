@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divs and Spans</title>
+    <style>
+      body {
+        background-color: #f5f5ff;
+        color: midnightblue;
+      }
+
+      /*
+        This styles the navigation container to have a
+        background color of cornflowerblue and gives it
+        padding of 10px on the top and the bottom and
+        0px on the left and right. 
+      */
+      nav {
+        background-color: lightblue;
+        padding: 10px 0px;
+      }
+
+      /*
+        This styles the ul inside the nav to have no bullet points beside
+        its list items. 
+      */
+      nav ul {
+        list-style: none;
+      }
+
+      /*
+        This styles all list items inside the ul that is inside the nav
+        container to display as inline block elements, with a margin of
+        10px, and a font size of 20px. 
+      */
+      nav ul li {
+        display: inline-block;
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      /*
+        This styles all elements with class nav-link to have padding of
+        5px, margin of 4px, a 2px solid black border, a background color
+        of #191970, and a font color of #f5f5ff. 
+      */
+      .nav-link {
+        padding: 5px;
+        margin: 4px;
+        border: 2px solid black;
+        background-color: #191970;
+        color: #f5f5ff;
+      }
+
+      /* 
+        This styles all the anchors that are inside the list items that
+        are inside the ul, which is inside the nav container. This uses
+        what is called descendant selectors.
+      */
+      /* nav ul li a {
+        padding: 5px;
+        margin: 4px;
+        border: 2px solid black;
+        background-color: #191970;
+        color: #f5f5ff;
+      } */
+
+      h1 {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      /*
+        This styles all div containers to have a background color
+        of ghost white, a border of 4px with a solid black line,
+        rounds the corners of the border to have a radius of 5px,
+        sets the width to be whatever size the div is automatically,
+        and sets the height to 140px. 
+      */
+      div {
+        background-color: lightblue;
+        border: 4px solid black;
+        border-radius: 5px;
+
+        width: auto;
+        height: 180px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+
+      /* 
+        This is how to style an element using its ID.
+        This styles the element with ID styled-by-id to use
+        the font Georgia by default. If Georgia cannot be used,
+        then Times New Roman is used. If Times New Roman cannot be
+        used, Cambria is used. If Cambria cannot be used, the
+        browser will use its default serif font to display the
+        text. This also styles the text to be bolded.
+      */
+      #styled-by-id {
+        font-family: Georgia, "Times New Roman", Cambria, serif;
+        font-weight: bold;
+      }
+
+      /*
+        This styles all span elements to have a background color
+        of plum and styles the text to be italicized. 
+      */
+      span {
+        background-color: plum;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Inline CSS</a></li>
+        <li><a href="internal-css.html" class="nav-link">Internal CSS</a></li>
+        <li><a href="external-css.html" class="nav-link">External CSS</a></li>
+        <li>
+          <a href="testing-cascading.html" class="nav-link">
+            Testing Cascading
+          </a>
+        </li>
+        <li>
+          <a href="classes-and-ids.html" class="nav-link">Classes and IDs</a>
+        </li>
+        <li><a href="div-and-span.html" class="nav-link">Divs and Spans</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Divs and Spans</h1>
+
+      <!-- 
+        NOTE: This is NOT a good use of a div. This is just for a demo.
+
+        divs should only be used after using several semantic tags and still
+        needing more containers inside the semantic tags.
+
+        divs are used to contain multiple block elements.
+      -->
+      <div>
+        <p>This page shows how to use divs and spans.</p>
+
+        <p>Does this paragraph have the same styling as my other paragraph?</p>
+
+        <!-- 
+          This paragraph holds a span.
+
+          A span element is used to contain multiple inline elements or
+          it is used to style a specific word or set of words inside another
+          HTML element, such as a paragraph.
+        -->
+        <p id="styled-by-id">
+          This paragraph will show the effect of giving an element an ID and
+          <span>styling</span> that ID.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
