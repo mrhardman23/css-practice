@@ -35,6 +35,15 @@
         font-size: 40px;
       }
 
+      section {
+        position: relative;
+
+        background-color: #191970;
+        height: 50vh;
+
+        border-radius: 20px;
+      }
+
       /*
         This styles all divs on the web page to have a background color
         of #d4ebf2, sets the div to use the automatic width of the
@@ -45,18 +54,48 @@
         and right. Finally, aligns the text center.
       */
       div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        display: inline-block;
+
         background-color: #d4ebf2;
         width: auto;
-        height: 200px;
+
         border: 2px solid black;
         border-radius: 20px;
         padding: 10px 20px;
+
         text-align: center;
+
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
       }
 
       p {
+        position: relative;
+        left: 50%;
+
         font-size: 24px;
         color: #313131;
+
+        width: 75%;
+
+        /* 
+          Since the transform property is not supported by default on every version
+          of every browser, we also include the prefixes for the transform property
+          to try to allow our styling to show up properly on as many user browsers
+          as possible.
+        */
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
       }
 
       #styled-by-id {
@@ -102,22 +141,28 @@
         This is a div, which is short for division. It is a block element that acts
         like a container for multiple block elements.
       -->
-      <div>
-        <p>This page shows the effects of adding internal CSS to a web page.</p>
+      <section>
+        <div>
+          <p>
+            This page shows the effects of adding internal CSS to a web page.
+          </p>
 
-        <p>Does this paragraph have the same styling as my other paragraph?</p>
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
 
-        <!-- 
-          This demonstrates the use of span, which is an inline element used to
-          group multiple inline elements. It can also be used to style specific
-          words or sets of words inside other HTML elements, which is how it is
-          being used in this context.
-        -->
-        <p id="styled-by-id">
-          This paragraph will show the effect of giving an element an ID and
-          <span>styling</span> that ID.
-        </p>
-      </div>
+          <!-- 
+            This demonstrates the use of span, which is an inline element used to
+            group multiple inline elements. It can also be used to style specific
+            words or sets of words inside other HTML elements, which is how it is
+            being used in this context.
+          -->
+          <p id="styled-by-id">
+            This paragraph will show the effect of giving an element an ID and
+            <span>styling</span> that ID.
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
