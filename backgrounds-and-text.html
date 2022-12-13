@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divs and Spans</title>
+    <style>
+      body {
+        background-color: #f5f5ff;
+        color: midnightblue;
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      nav li {
+        display: inline-block;
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      .nav-link {
+        margin: 4px;
+        border: 2px solid black;
+        padding: 5px;
+
+        background-color: #191970;
+        color: #f5f5ff;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        background-color: #f5f5ff;
+        color: #191970;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      section {
+        position: relative;
+
+        background-color: #191970;
+        height: 50vh;
+
+        border-radius: 20px;
+      }
+
+      /*
+        This styles all divs on the web page to have a background color
+        of #d4ebf2, sets the div to use the automatic width of the
+        div, and sets the height to 200px. This also styles the border to
+        have a width of 2px with a solid black line, rounds the corners of
+        the div to have a radius of 20px, and adds 10px of padding to the
+        top and bottom of the div, as well as 20px of padding on the left
+        and right. Finally, aligns the text center.
+      */
+      div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        display: inline-block;
+
+        background-color: #d4ebf2;
+        width: auto;
+
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 10px 20px;
+
+        text-align: center;
+
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      p {
+        position: relative;
+        left: 50%;
+
+        font-size: 24px;
+        color: #313131;
+
+        width: 75%;
+
+        /* 
+          Since the transform property is not supported by default on every version
+          of every browser, we also include the prefixes for the transform property
+          to try to allow our styling to show up properly on as many user browsers
+          as possible.
+        */
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+
+      #styled-by-id {
+        font-family: Georgia, "Times New Roman", Cambria, serif;
+        font-weight: bold;
+      }
+
+      /*
+        This styles all spans on the web page to underline the text inside
+        the span and change the text to be italicized. 
+      */
+      span {
+        text-decoration: underline;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Inline CSS</a></li>
+        <li><a href="internal-css.html" class="nav-link">Internal CSS</a></li>
+        <li><a href="external-css.html" class="nav-link">External CSS</a></li>
+        <li>
+          <a href="testing-cascading.html" class="nav-link">
+            Testing Cascading
+          </a>
+        </li>
+        <li>
+          <a href="classes-and-ids.html" class="nav-link">Classes and IDs</a>
+        </li>
+        <li><a href="div-and-span.html" class="nav-link">Divs and Spans</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Divs and Spans</h1>
+
+      <!-- 
+        NOTE: This is NOT the proper way to use a div because I have not used all
+        the proper semantic tags yet.
+
+        This is a div, which is short for division. It is a block element that acts
+        like a container for multiple block elements.
+      -->
+      <section>
+        <div>
+          <p>
+            This page shows the effects of adding internal CSS to a web page.
+          </p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+
+          <!-- 
+            This demonstrates the use of span, which is an inline element used to
+            group multiple inline elements. It can also be used to style specific
+            words or sets of words inside other HTML elements, which is how it is
+            being used in this context.
+          -->
+          <p id="styled-by-id">
+            This paragraph will show the effect of giving an element an ID and
+            <span>styling</span> that ID.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
