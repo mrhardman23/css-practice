@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gradients</title>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         background-color: #f5f5ff;
         color: midnightblue;
@@ -61,6 +65,8 @@
 
       section {
         position: relative;
+
+        margin: 20px;
 
         background-color: #191970;
         height: 50vh;
@@ -135,9 +141,76 @@
         text-decoration: underline;
         font-style: italic;
       }
+
+      #back-to-top {
+        /*
+          We change the display to a flexbox so that we can center the 
+          text inside the anchor horizontally and vertically. 
+        */
+        display: -ms-flexbox;
+        display: -moz-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+
+        /*
+          This allows us to fix the position of the Back to Top button
+          to the bottom right corner of the web page and makes it follow
+          the user as they scroll.
+        */
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+
+        width: 80px;
+        height: 80px;
+
+        /* 
+          This allows us to center our content horizontally in the 
+          Back to Top anchor.
+        */
+        -ms-flex-pack: center;
+        -moz-box-pack: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+
+        /*
+          This allows us to center our content vertically in the
+          Back to Top anchor. 
+        */
+        -ms-flex-align: center;
+        -moz-box-align: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        border: #121212 solid 2px;
+
+        -moz-border-radius: 40px;
+        -webkit-border-radius: 40px;
+        border-radius: 40px;
+
+        /*
+          This is allows us to style the background of the Back to Top
+          button to be a radial gradient because it is a round button.
+          The first color is at the center of the gradient and the second
+          color is at the edge of the round area. 
+        */
+        background: -o-radial-gradient(#91eae4, #86a8e7);
+        background: -moz-radial-gradient(#91eae4, #86a8e7);
+        background: -webkit-radial-gradient(#91eae4, #86a8e7);
+        background: radial-gradient(#91eae4, #86a8e7);
+
+        color: #313131;
+
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+      }
     </style>
   </head>
-  <body>
+  <body id="top">
     <nav>
       <ul>
         <li><a href="index.html" class="nav-link">Inline CSS</a></li>
@@ -191,6 +264,137 @@
           </p>
         </div>
       </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of gradients.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+
+          <!-- 
+            This demonstrates the use of span, which is an inline element used to
+            group multiple inline elements. It can also be used to style specific
+            words or sets of words inside other HTML elements, which is how it is
+            being used in this context.
+          -->
+          <p id="styled-by-id">
+            This paragraph will show the effect of giving an element an ID and
+            <span>styling</span> that ID.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of gradients.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+
+          <!-- 
+            This demonstrates the use of span, which is an inline element used to
+            group multiple inline elements. It can also be used to style specific
+            words or sets of words inside other HTML elements, which is how it is
+            being used in this context.
+          -->
+          <p id="styled-by-id">
+            This paragraph will show the effect of giving an element an ID and
+            <span>styling</span> that ID.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of gradients.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+
+          <!-- 
+            This demonstrates the use of span, which is an inline element used to
+            group multiple inline elements. It can also be used to style specific
+            words or sets of words inside other HTML elements, which is how it is
+            being used in this context.
+          -->
+          <p id="styled-by-id">
+            This paragraph will show the effect of giving an element an ID and
+            <span>styling</span> that ID.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of gradients.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+
+          <!-- 
+            This demonstrates the use of span, which is an inline element used to
+            group multiple inline elements. It can also be used to style specific
+            words or sets of words inside other HTML elements, which is how it is
+            being used in this context.
+          -->
+          <p id="styled-by-id">
+            This paragraph will show the effect of giving an element an ID and
+            <span>styling</span> that ID.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of gradients.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+
+          <!-- 
+            This demonstrates the use of span, which is an inline element used to
+            group multiple inline elements. It can also be used to style specific
+            words or sets of words inside other HTML elements, which is how it is
+            being used in this context.
+          -->
+          <p id="styled-by-id">
+            This paragraph will show the effect of giving an element an ID and
+            <span>styling</span> that ID.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of gradients.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+
+          <!-- 
+            This demonstrates the use of span, which is an inline element used to
+            group multiple inline elements. It can also be used to style specific
+            words or sets of words inside other HTML elements, which is how it is
+            being used in this context.
+          -->
+          <p id="styled-by-id">
+            This paragraph will show the effect of giving an element an ID and
+            <span>styling</span> that ID.
+          </p>
+        </div>
+      </section>
+
+      <a href="#top" id="back-to-top">
+        Back <br />
+        to Top
+      </a>
     </main>
   </body>
 </html>
