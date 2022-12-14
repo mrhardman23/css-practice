@@ -48,12 +48,24 @@
       }
 
       .nav-link {
+        display: inline-block;
+
         margin: 4px;
         border: 2px solid black;
         padding: 5px;
 
         background-color: #191970;
         color: #f5f5ff;
+
+        /*
+          This styles the nav links to tilt in the X direction
+          by an amount of -5 degrees. 
+        */
+        -ms-transform: skewX(-5deg);
+        -o-transform: skewX(-5deg);
+        -moz-transform: skewX(-5deg);
+        -webkit-transform: skewX(-5deg);
+        transform: skewX(-5deg);
       }
 
       nav a:hover,
@@ -65,6 +77,16 @@
       h1 {
         text-align: center;
         font-size: 40px;
+
+        /*
+          This styles the heading to grow to a factor
+          of 4.5 in the horizontal and vertical directions. 
+        */
+        -ms-transform: scale(4.5);
+        -o-transform: scale(4.5);
+        -moz-transform: scale(4.5);
+        -webkit-transform: scale(4.5);
+        transform: scale(4.5);
       }
 
       section {
@@ -110,6 +132,19 @@
         transform: translate(-50%, -50%);
       }
 
+      #first-div {
+        /* 
+          This rotates the element with the ID of
+          first-div by 30 degrees, making it go
+          to the bottom right. 
+        */
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        transform: rotate(30deg);
+      }
+
       p {
         position: relative;
         left: 50%;
@@ -130,6 +165,18 @@
         -moz-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
+      }
+
+      #second-div {
+        /*
+          This styles the second div to be shifted left by 50% of its
+          width and up by 120% of its height. 
+        */
+        -ms-transform: translate(-50%, -120%);
+        -o-transform: translate(-50%, -120%);
+        -moz-transform: translate(-50%, -120%);
+        -webkit-transform: translate(-50%, -120%);
+        transform: translate(-50%, -120%);
       }
 
       #styled-by-id {
@@ -250,7 +297,7 @@
         like a container for multiple block elements.
       -->
       <section>
-        <div>
+        <div id="first-div">
           <p>This page shows the use of gradients.</p>
 
           <p>
@@ -271,7 +318,7 @@
       </section>
 
       <section>
-        <div>
+        <div id="second-div">
           <p>This page shows the use of gradients.</p>
 
           <p>
