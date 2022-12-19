@@ -15,6 +15,9 @@
       }
 
       body {
+        /* Part 1 */
+        display: inline-block;
+
         background-color: #f5f5ff;
         color: midnightblue;
 
@@ -185,7 +188,14 @@
       section {
         position: relative;
 
+        /* Part 2 */
+        width: 25%;
+
+        /* NOTE: The only values that can be used for float are left, right, and inherit. */
+        float: left;
+
         margin: 20px;
+        margin-right: 2.5%;
 
         background-color: #191970;
         height: 50vh;
@@ -210,11 +220,11 @@
         display: inline-block;
 
         background-color: #d4ebf2;
-        width: auto;
+        /* Part 3 */
+        width: 80%;
 
         border: 2px solid black;
         border-radius: 20px;
-        padding: 10px 20px;
 
         text-align: center;
 
@@ -327,6 +337,19 @@
         font-weight: bold;
         text-decoration: none;
       }
+
+      #cleared {
+        /*
+          When we don't want an element to float beside other floated elements,
+          we use the clear property. This property will break the floating of elements
+          and any element added to the website underneath this element will also not float
+          beside other elements of the page.
+
+          NOTE: Whatever value you use for float is the value you should use for clear 
+                (i.e., in this case it is left).
+        */
+        clear: left;
+      }
     </style>
   </head>
   <body id="top">
@@ -363,29 +386,68 @@
       <h1>Transitions and Animations</h1>
 
       <!-- 
-        NOTE: This is NOT the proper way to use a div because I have not used all
-        the proper semantic tags yet.
+        NOTE: This is NOT the proper way to use a div because it wraps around the
+              entire div.
 
         This is a div, which is short for division. It is a block element that acts
         like a container for multiple block elements.
       -->
       <section>
         <div>
-          <p>This page shows the use of gradients.</p>
+          <p>This page shows the use of transitions and animations.</p>
 
           <p>
             Does this paragraph have the same styling as my other paragraph?
           </p>
+        </div>
+      </section>
 
-          <!-- 
-            This demonstrates the use of span, which is an inline element used to
-            group multiple inline elements. It can also be used to style specific
-            words or sets of words inside other HTML elements, which is how it is
-            being used in this context.
-          -->
-          <p id="styled-by-id">
-            This paragraph will show the effect of giving an element an ID and
-            <span>styling</span> that ID.
+      <section>
+        <div>
+          <p>This page shows the use of transitions and animations.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of transitions and animations.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of transitions and animations.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of transitions and animations.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p>This page shows the use of transitions and animations.</p>
+
+          <p>
+            Does this paragraph have the same styling as my other paragraph?
           </p>
         </div>
       </section>
@@ -397,124 +459,10 @@
           <p>
             Does this paragraph have the same styling as my other paragraph?
           </p>
-
-          <!-- 
-            This demonstrates the use of span, which is an inline element used to
-            group multiple inline elements. It can also be used to style specific
-            words or sets of words inside other HTML elements, which is how it is
-            being used in this context.
-          -->
-          <p id="styled-by-id">
-            This paragraph will show the effect of giving an element an ID and
-            <span>styling</span> that ID.
-          </p>
         </div>
       </section>
 
-      <section>
-        <div>
-          <p>This page shows the use of gradients.</p>
-
-          <p>
-            Does this paragraph have the same styling as my other paragraph?
-          </p>
-
-          <!-- 
-            This demonstrates the use of span, which is an inline element used to
-            group multiple inline elements. It can also be used to style specific
-            words or sets of words inside other HTML elements, which is how it is
-            being used in this context.
-          -->
-          <p id="styled-by-id">
-            This paragraph will show the effect of giving an element an ID and
-            <span>styling</span> that ID.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <p>This page shows the use of gradients.</p>
-
-          <p>
-            Does this paragraph have the same styling as my other paragraph?
-          </p>
-
-          <!-- 
-            This demonstrates the use of span, which is an inline element used to
-            group multiple inline elements. It can also be used to style specific
-            words or sets of words inside other HTML elements, which is how it is
-            being used in this context.
-          -->
-          <p id="styled-by-id">
-            This paragraph will show the effect of giving an element an ID and
-            <span>styling</span> that ID.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <p>This page shows the use of gradients.</p>
-
-          <p>
-            Does this paragraph have the same styling as my other paragraph?
-          </p>
-
-          <!-- 
-            This demonstrates the use of span, which is an inline element used to
-            group multiple inline elements. It can also be used to style specific
-            words or sets of words inside other HTML elements, which is how it is
-            being used in this context.
-          -->
-          <p id="styled-by-id">
-            This paragraph will show the effect of giving an element an ID and
-            <span>styling</span> that ID.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <p>This page shows the use of gradients.</p>
-
-          <p>
-            Does this paragraph have the same styling as my other paragraph?
-          </p>
-
-          <!-- 
-            This demonstrates the use of span, which is an inline element used to
-            group multiple inline elements. It can also be used to style specific
-            words or sets of words inside other HTML elements, which is how it is
-            being used in this context.
-          -->
-          <p id="styled-by-id">
-            This paragraph will show the effect of giving an element an ID and
-            <span>styling</span> that ID.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <p>This page shows the use of gradients.</p>
-
-          <p>
-            Does this paragraph have the same styling as my other paragraph?
-          </p>
-
-          <!-- 
-            This demonstrates the use of span, which is an inline element used to
-            group multiple inline elements. It can also be used to style specific
-            words or sets of words inside other HTML elements, which is how it is
-            being used in this context.
-          -->
-          <p id="styled-by-id">
-            This paragraph will show the effect of giving an element an ID and
-            <span>styling</span> that ID.
-          </p>
-        </div>
-      </section>
+      <p id="cleared">This element should not be beside the other boxes!</p>
 
       <a href="#top" id="back-to-top">
         Back <br />
