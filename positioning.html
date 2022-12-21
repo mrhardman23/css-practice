@@ -20,6 +20,22 @@
       }
 
       nav {
+        /*
+          The visibility property allows you to change whether an element
+          is shown (visible) or not shown (hidden). This property will still
+          save the space that is taken up by this element on the page.
+        */
+        /* visibility: hidden; */
+
+        /*
+          The display property allows you to change whether an element is
+          a block element, inline element, inline-block element, and more.
+          The value of none will make it so that the element does not display
+          on the web page and it does not save the space that would be used by
+          the element.
+        */
+        /* display: none; */
+
         padding: 10px 0;
 
         /*
@@ -43,11 +59,25 @@
 
       nav li {
         display: inline-block;
+        width: 40%;
         margin: 10px;
         font-size: 20px;
       }
 
       .nav-link {
+        /*
+          In this example, we had to change the anchors inside
+          our list items to be inline-block elements because
+          by default they are inline elements and inline elements
+          do not allow you to change the width and height of those
+          elements (i.e., width: 100%;).
+
+          NOTE: This will be very important when we talk about 
+                flex and grid later on.
+        */
+        display: inline-block;
+        width: 100%;
+
         margin: 4px;
         border: 2px solid black;
         padding: 5px;
